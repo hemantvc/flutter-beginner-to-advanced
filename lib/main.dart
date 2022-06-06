@@ -18,11 +18,13 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Container(
           padding: EdgeInsets.all(10),
-          color: Colors.red,
           width: 100,
           height: 100,
-          alignment: Alignment.bottomRight,
+          alignment: Alignment.topLeft,
           child: const Text("I am Container!"),
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(color: Colors.amberAccent,
+          shape: BoxShape.circle),
         ),
       ),
     );
