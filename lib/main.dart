@@ -20,11 +20,19 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.all(10),
           width: 100,
           height: 100,
-          alignment: Alignment.topLeft,
-          child: const Text("I am Container!"),
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.amberAccent,
-          shape: BoxShape.circle),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: Colors.amberAccent,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 10)],
+              gradient: LinearGradient(colors: [Colors.pink, Colors.yellow])),
+          child: const Text(
+            "I am Container!",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white, fontSize: 15, fontStyle: FontStyle.italic),
+          ),
         ),
       ),
     );
