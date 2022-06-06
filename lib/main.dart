@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home:
-      HomePage(),
-    theme: ThemeData(
-      primarySwatch: Colors.purple
-    ),
+  runApp(MaterialApp(
+    home: HomePage(),
+    theme: ThemeData(primarySwatch: Colors.purple),
   ));
 }
 
@@ -15,15 +13,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Hariom Hariom")
+      appBar: AppBar(title: const Text("Hariom Hariom")),
+      // Center alignment
+      body: Center(
+        child: Container(
+          padding: EdgeInsets.all(10),
+          color: Colors.red,
+          width: 100,
+          height: 100,
+          alignment: Alignment.bottomRight,
+          child: const Text("I am Container!"),
         ),
-      body: Container(
-        child: Text("This is body of the app!"),
       ),
-
     );
   }
-
 }
-
